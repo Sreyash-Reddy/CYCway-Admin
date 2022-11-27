@@ -1,13 +1,429 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500&display=swap');
+*{
+    font-family: 'Mukta', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.dummyMainDiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#69D8D5,#69D8D5,#CC5ED0,#CC5ED0);
+    z-index: -2;
+    overflow: hidden;
 }
+.dummyAppBody{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.AppBody{
+    width: 50%;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: 25%;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    height: 50%;
+    padding-top: 45px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+
+.App h1{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.App h2{
+    /* text-align: center; */
+    margin-top: 25px;
+}
+
+.App input{
+    /* padding-left: 10px; */
+    /* width: 300p; */
+    border-top:none;
+    border-right:none;
+    border-left: none;
+    border-bottom: 2px solid rgb(145, 152, 145);
+    background: none;
+    outline: none;
+    margin-bottom: 25px;
+    font-size: 20px;
+    /* width: 300px; */
+}
+
+
+
+.App select{
+    border-top:none;
+    border-right:none;
+    border-left: none;
+    border-bottom: 2px solid rgb(145, 152, 145);
+    background: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+.App .button{
+    margin-top: 75px;
+    height: 50px;
+    /* background-color: black; */
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #69D8D5;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+.App .button:hover{
+    margin-top: 75px;
+    height: 50px;
+    /* background-color: black; */
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #CC5ED0;
+    color: white;
+    border-radius: 25px;
+}
+.opacdiv1{
+    position: absolute;
+    height: 500px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.24);
+    transform: rotate(150deg) translate(15vh,30vh);
+    border-radius: 10px;
+    z-index: -1;
+}
+.opacdiv2{
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 500px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.105);
+    transform: rotate(150deg) translate(-5vh,-40vh);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.AppbodyMain{
+    width: 98%;
+    height: 98%;
+    /* background-color: black; */
+    margin-left: 1%;
+    transform: translateY(1%);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+    .AppBody{
+        width: 70%;
+        height: auto;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-left: 15%;
+    
+    }
+    .AppbodyMain{
+        padding-bottom: 25px;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    /* .AppBody{
+        width: 80%;
+        height: auto;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-left: 10%;
+    
+    }
+    .AppbodyMain{
+        padding-bottom: 25px;
+    } */
+    .App{
+        display: flex;
+        flex-direction: column;
+        /* width: 50%; */
+        /* margin-left: 20%; */
+        height: 50%;
+        padding-top: 45px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        
+    }
+
+}
+@media only screen and (max-width: 500px){
+    .AppBody{
+        width: 90%;
+        height: auto;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-left: 5%;
+    
+    }
+    .AppbodyMain{
+        padding-bottom: 25px;
+    }
+
+}
+@media only screen and (max-width: 400px){
+    .AppBody{
+        width: 80%;
+        height: auto;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-left: 10%;
+    
+    }
+    .AppbodyMain{
+        padding-bottom: 25px;
+    }
+
+    .App{
+        font-size: 10px;
+    }
+
+}
+
+
+
+/* Dashboard */
+
+.dummyMainDashDiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#69D8D5,#69D8D5,#CC5ED0,#CC5ED0);
+    z-index: -2;
+    overflow-x: hidden;
+}
+
+.dummyDashBody{
+    height: 100%;
+    /* overflow-y: hidden; */
+}
+.DashBody{
+    width: 70%;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: 15%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.DashBody .Dashimg img{
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    /* border: 2px solid black; */
+}
+
+.DashBody .Dashimg{
+    height: 70%;
+    width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 7.5%;
+    /* background-color: black; */
+    border: 5px solid black;
+    position: relative;
+}
+
+.datacyc{
+    /* background-color: black; */
+    width: calc(100% - 440px);
+}
+.datacyc h1{
+    /* background-color: black; */
+    /* border-left: 5px solid black; */
+    margin-top: 45px;
+    text-align: center;
+    /* margin-left: 2%; */
+}
+
+.datacyc h2{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.finalData{
+    height: 70px;
+    padding: 20px;
+    font-size: 20px;
+    background-color:#66BF39;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* visibility: hidden; */
+    animation: animation3 4s linear infinite;
+}
+
+.finalData1{
+    /* height: 70px;
+    padding: 20px;
+    font-size: 20px;
+    background-color:#66BF39;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0; */
+    display: none;
+}
+
+
+.finalData .underlinediv{  
+    animation: animation2 4s linear infinite;
+    height: 5px;
+    background-color: white;
+}
+
+@keyframes animation2{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+@keyframes animation3{
+    0%{
+        top: -100px;
+    }
+    5%{
+        top: 15px;
+    }
+    8%{
+        top: 0px;
+    }
+    92%{
+        top: 0px;
+    }
+    95%{
+        top: 15px;
+    }
+    100%{
+        top: -100px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .datacyc h1{
+        font-size: 25px;
+    }
+    
+    .datacyc h2{
+        font-size: 20px;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    .finalData{
+        height: auto;
+    }
+    .datacyc{
+        width: 100%;
+        margin-top: 300px;
+    }
+    .datacyc h1{
+        font-size: 25px;
+    }
+    
+    .datacyc h2{
+        font-size: 20px;
+    }
+    .DashBody{
+        height:auto;
+        flex-wrap: wrap;
+        position: relative;
+        padding-bottom: 15px;
+        margin-top: 150px;
+    
+    }
+    .DashBody .Dashimg{
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        /* margin-bottom: 3; */
+        
+    }
+    .DashBody .Dashimg img{
+        height: 200px;
+        
+        
+        /* border: 2px solid black; */
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .datacyc h1{
+        font-size: 20px;
+    }
+    
+    .datacyc h2{
+        font-size: 15px;
+    }
+    
+    .DashBody{
+        height:auto;
+        flex-wrap: wrap;
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        padding-bottom: 15px;
+    
+    }
+    .DashBody .Dashimg{
+        height: 300px;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        /* margin-bottom: 3; */
+        
+    }
+    .DashBody .Dashimg img{
+        height: 150px;
+        
+        
+        /* border: 2px solid black; */
+    }
+  }
