@@ -29,6 +29,7 @@
     margin-left: 25%;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -288,6 +289,18 @@
     padding: 20px;
     font-size: 20px;
     background-color:#66BF39;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* visibility: hidden; */
+    animation: animation3 4s linear infinite;
+}
+.finalData2{
+    height: 70px;
+    padding: 20px;
+    font-size: 20px;
+    background-color:#bf393b;
     color: white;
     position: absolute;
     top: 0;
