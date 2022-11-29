@@ -65,7 +65,7 @@ function App() {
         <div className="AppBody">
           <div className="AppbodyMain">
             <div className="App">
-              <h1>Admin Login</h1>
+              <h1>Admin-Login</h1>
               <h2>Enter your id: </h2>
               <input type="text" placeholder="Enter your ID number" value={id} onChange={handleToDoChange}></input>
               <h2>Location: </h2>
