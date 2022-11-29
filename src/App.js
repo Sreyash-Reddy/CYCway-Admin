@@ -9,7 +9,7 @@ function App() {
   const [id,setid] = useState("");
   const [idArr ,setidArr] = useState([]);
   const [status,setstatus] = useState("");
-  const [locstatus,setlocstatus] = useState("test");
+  const [locstatus,setlocstatus] = useState("ScienceBlock");
   let keyId = 0;
 
   useEffect(()=>{
@@ -39,7 +39,7 @@ function App() {
         let data = idArr[keyId].name;
         let locate = locstatus;
         // console.log(locate);
-        navigate("/363337393633373736313739323037373635363236393734363532303732363536343639373236353633373436353634323037343666323036343631373336383632366636313732363432633230363936363230373436383639373332303631363436343732363537333733323036393733323036363666373536653634323036663735373432303734363836353665323036393734373332303631323036333666366437303732366636643639373336353230336132393362",{state:{loc: locate }});
+        navigate("/dashboard",{state:{loc: locate }});
         break;
       }
       if(j===idArr.length-1){
@@ -70,9 +70,14 @@ function App() {
               <input type="text" placeholder="Enter your ID number" value={id} onChange={handleToDoChange}></input>
               <h2>Location: </h2>
               <select value={locstatus} onChange={(e) => setlocstatus(e.target.value)}>
-                <option value="test">test</option>
-                <option value="test2">test2</option>
-                <option value="test3">test3</option>
+                <option value="ScienceBlock">Science Block</option>
+                <option value="AdminBlock">Admin Block</option>
+                <option value="MainGate">Main Gate</option>
+                <option value="PoovamGate">Poovam Gate</option>
+                <option value="BOH">BOH</option>
+                <option value="GLH">GLH</option>
+                <option value="MoyarHostel">Moyar Hostel</option>
+                <option value="Canteen">Canteen</option>
               </select>
               <div className="button" onClick={redirectedPage}>Submit</div>
             </div>
